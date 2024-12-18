@@ -112,7 +112,7 @@ canvas {
   }
 
 /* Mobile Layout */
-@media (max-width: 1292px) {
+@media (max-width: 768px) {
   body, html {
     margin: 0;
     padding: 0;
