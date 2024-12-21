@@ -90,7 +90,7 @@ canvas {
     align-items: center;
     width: 800px;
     height: 400px;
-    background-color: black;
+/*     background-color: black; */
   }
 
   .game-frame {
