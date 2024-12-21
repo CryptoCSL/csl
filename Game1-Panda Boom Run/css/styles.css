@@ -47,7 +47,7 @@ body {
   color:rgb(5, 47, 5);
 }
 
-.game-frame {
+.desktopGameFrame {
   position: relative;
   width: 800px;
   height: 400px;
@@ -61,7 +61,58 @@ body {
   align-items: center;  
 }
 
-canvas {
+.game-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  padding: 10px 10px;
+  font-size: 2.5em;
+  font-weight:900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(246, 249, 246);
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  touch-action: none;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.game-btn:active {
+  background-color: #0097a7;
+}
+
+/* Button Positions */
+#btn-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #f82613;
+  z-index: 10;
+}
+
+#btn-right {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  background-color: #16aa06;
+  z-index: 10;
+}
+
+#btn-jump {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 20px;
+  background-color: #d6086c;
+}
+
+#desktopGameCanvas {
   pointer-events: auto;
   width: 100%;
   height: 100%;
@@ -75,11 +126,12 @@ canvas {
     display: none; /* Hide desktop layout on mobile */
   }
 
-  /* body, html {
+  body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-  } */
+    width: 100%;
+  }
 
   
 
@@ -88,32 +140,26 @@ canvas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    height: 400px;
-    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    background-color: black;
   }
 
-  .game-frame {
+  .mobileGameFrame {
     position: relative;
   /* aspect-ratio: 2/1; */
-    width: 800px;
-    height: 400px;
-    /* background-color: greenyellow;     */
-    /* border: 10px solid #4CAF50; */
-    /* border-radius: 10px; */
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;    
+    border: 10px solid #4CAF50;
+    border-radius: 10px;
     margin: 0;
-    /* padding: 10px; */
+    padding: 10px;
     display:flex;
     justify-content:center;
     align-items: center;  
-    /* overflow: visible;   */
-
-
-    /* width: 100%; Fullscreen width for mobile */
-    /* height: 100%; Fullscreen height for mobile */
-    border: none; /* Remove borders for fullscreen experience */
-    /* border-radius: 0; */
-    /* background-color: black; */
+    overflow: visible;  
+    border: none; 
   }
 
  
@@ -121,7 +167,7 @@ canvas {
     display: none; /* Hide titles on mobile */
   }
 
-  .game-btn {
+  .game-btnM {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -142,20 +188,14 @@ canvas {
     pointer-events: auto;
   }
 
-  .game-btn:active {
+  .game-btnM:active {
     background-color: #0097a7;
-  }
+  } 
 
   /* Button Positions */
-  #btn-left {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #f82613;
-    z-index: 10;
-  }
+  
 
-  #btn-right {
+  #btn-rightM {
     position: absolute;
     top: 20px;
     left: 80px;
@@ -163,12 +203,20 @@ canvas {
     z-index: 10;
   }
 
-  #btn-jump {
+  #btn-jumpM {
     position: absolute;
     width: 60px;
     height: 60px;
     top: 20px;
     right: 20px;
     background-color: #d6086c;
+  }
+
+  #btn-leftM {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f82613;
+    z-index: 10;
   }
 }
