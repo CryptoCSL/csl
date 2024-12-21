@@ -1,4 +1,4 @@
-/* General Stylrs*/
+/* General Styles*/
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ body {
   }
 
 .mobile-layout {
-  display: none; /* Hide mobile layout on desktop */
+  display: none; /*Hide mobile layout on desktop*/
 }
 
 #title  {
@@ -49,8 +49,8 @@ body {
 
 .game-frame {
   position: relative;
-  width: 800;
-  height: 400;
+  width: 800px;
+  height: 400px;
   background-color: greenyellow;    
   border: 10px solid #4CAF50;
   border-radius: 10px;
@@ -90,17 +90,17 @@ canvas {
     align-items: center;
     width: 800px;
     height: 400px;
-/*     background-color: black; */
+    /* background-color: black; */
   }
 
   .game-frame {
     position: relative;
   /* aspect-ratio: 2/1; */
-    /* width: 800;
-    height: 400; */
+    width: 800px;
+    height: 400px;
     /* background-color: greenyellow;     */
     /* border: 10px solid #4CAF50; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin: 0;
     /* padding: 10px; */
     display:flex;
@@ -109,16 +109,17 @@ canvas {
     /* overflow: visible;   */
 
 
-    width: 100%; /* Fullscreen width for mobile*/
-    height: 100%; /* Fullscreen height for mobile*/
+    /* width: 100%; Fullscreen width for mobile */
+    /* height: 100%; Fullscreen height for mobile */
     border: none; /* Remove borders for fullscreen experience */
-    border-radius: 0;
-    background-color: black;
+    /* border-radius: 0; */
+    /* background-color: black; */
   }
 
-  #title, #rights2 {
+ 
+  #title, #rights2, #CTA {
     display: none; /* Hide titles on mobile */
-}
+  }
 
   .game-btn {
     position: absolute;
@@ -171,36 +172,3 @@ canvas {
     background-color: #d6086c;
   }
 }
-
-/* Button Styles */
-
-
-/* .game-btn:active {
-  background-color: #0097a7;
-} */ */
-
-/* Button Positions */
-/* #btn-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: #f82613;
-  z-index: 1000;
-}
-
-#btn-right {
-  position: absolute;
-  top: 20px;
-  left: 80px;
-  background-color: #16aa06;
-  z-index: 1000;
-}
-
-#btn-jump {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 20px;
-  right: 20px;
-  background-color: #d6086c;
-} */
