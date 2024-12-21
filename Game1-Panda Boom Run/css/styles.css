@@ -145,11 +145,17 @@ body {
     background-color: black;
   }
 
+  #mobileGameCanvas {
+    pointer-events: auto;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .mobileGameFrame {
     position: relative;
   /* aspect-ratio: 2/1; */
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: greenyellow;    
     border: 10px solid #4CAF50;
     border-radius: 10px;
@@ -193,7 +199,13 @@ body {
   } 
 
   /* Button Positions */
-  
+  #btn-leftM {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f82613;
+    z-index: 10;
+  }
 
   #btn-rightM {
     position: absolute;
@@ -212,11 +224,5 @@ body {
     background-color: #d6086c;
   }
 
-  #btn-leftM {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #f82613;
-    z-index: 10;
-  }
+  
 }
