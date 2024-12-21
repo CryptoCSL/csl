@@ -17,20 +17,10 @@
    <!-- Desktop Layout -->
   <div class="desktop-layout">
     <h1 id="title">PANDA BOOM RUN</h1>
-    <div class="game-frame">
+    <div class="desktopGameFrame">
       <canvas id="desktopGameCanvas" width="800" height="400"></canvas>
-      <!-- <script src="requestAnimationFramePolyfill.js"></script> -->            
-    </div>
-    <h4 id="CTA" style="font-family: 'Lucida Sans'; font-size: 30px;">Press space/arrow keys to play!</h4>
-    <h4 id="rights2" style="font-family: 'Lucida Sans'; font-size: 20px;">© 2024 Lucky Pandas | All Rights Reserved</h4>
-  </div>
-
-  <!-- Mobile Layout -->
-  <div class="mobile-layout">
-    <div class="game-frame">
-      <canvas id="mobileGameCanvas" width="800" height="400"></canvas>
-      <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
-
+      <!-- <script src="requestAnimationFramePolyfill.js"></script> --> 
+       
       <!-- Circular Buttons with Font Awesome Arrows -->
       <button id="btn-left" class="game-btn">
         <i class="fas fa-arrow-left"></i>
@@ -39,6 +29,27 @@
         <i class="fas fa-arrow-right"></i>
       </button>
       <button id="btn-jump" class="game-btn">
+        <i class="fas fa-arrow-up"></i>
+      </button>      
+    </div>
+    <h4 id="CTA" style="font-family: 'Lucida Sans'; font-size: 30px;">Press space/arrow keys to play!</h4>
+    <h4 id="rights2" style="font-family: 'Lucida Sans'; font-size: 20px;">© 2024 Lucky Pandas | All Rights Reserved</h4>
+  </div>
+
+  <!-- Mobile Layout -->
+  <div class="mobile-layout">
+    <div class="mobileGameFrame">
+      <canvas id="mobileGameCanvas" width="900" height="400"></canvas>
+      <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
+
+      <!-- Circular Buttons with Font Awesome Arrows -->
+      <button id="btn-leftM" class="game-btnM">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button id="btn-rightM" class="game-btnM">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button id="btn-jumpM" class="game-btnM">
         <i class="fas fa-arrow-up"></i>
       </button>      
     </div>
@@ -145,6 +156,7 @@
     var moveRight = false;
     var jump = false;
 
+    // Event Listeners for Desktop layout
     // Event Listener for Left Button
     document.getElementById('btn-left').addEventListener('touchstart', () => {
       moveLeft = true;    
@@ -169,6 +181,34 @@
     });
 
     document.getElementById('btn-jump').addEventListener('touchend', () => {        
+      jump = false;      
+    }); 
+
+    // Event Listeners for Mobile layout
+    // Event Listener for Left Button
+    document.getElementById('btn-leftM').addEventListener('touchstart', () => {
+      moveLeft = true;    
+    });
+
+    document.getElementById('btn-leftM').addEventListener('touchend', () => {
+      moveLeft = false;    
+    });
+
+     // Event Listener for Right Button
+    document.getElementById('btn-rightM').addEventListener('touchstart', () => {
+      moveRight = true;     
+    });
+
+    document.getElementById('btn-rightM').addEventListener('touchend', () => {
+      moveRight = false;      
+    });
+
+    // Event Listener for Jump Button
+    document.getElementById('btn-jumpM').addEventListener('touchstart', () => { 
+      jump = true;      
+    });
+
+    document.getElementById('btn-jumpM').addEventListener('touchend', () => {        
       jump = false;      
     }); 
 
