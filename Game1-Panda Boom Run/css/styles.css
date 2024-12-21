@@ -69,7 +69,7 @@ canvas {
 
 
 /* Mobile Layout */
-@media (max-width: 768px) {
+@media (max-width: 932px) {
 
   .desktop-layout {
     display: none; /* Hide desktop layout on mobile */
