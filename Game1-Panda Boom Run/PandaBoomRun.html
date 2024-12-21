@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <title>Panda Boom Run</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles1.css">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,20 +18,8 @@
   <div class="desktop-layout">
     <h1 id="title">PANDA BOOM RUN</h1>
     <div class="game-frame">
-      <canvas id="gameCanvas" width="800" height="400"></canvas>
-      <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
-
-      <!-- Circular Buttons with Font Awesome Arrows -->
-      <!-- <button id="btn-left" class="game-btn">
-        <i class="fas fa-arrow-left"></i>
-      </button>
-      <button id="btn-right" class="game-btn">
-        <i class="fas fa-arrow-right"></i>
-      </button>
-      <button id="btn-jump" class="game-btn">
-        <i class="fas fa-arrow-up"></i>
-      </button> -->
-      
+      <canvas id="desktopGameCanvas" width="800" height="400"></canvas>
+      <!-- <script src="requestAnimationFramePolyfill.js"></script> -->            
     </div>
     <h4 id="CTA" style="font-family: 'Lucida Sans'; font-size: 30px;">Press space/arrow keys to play!</h4>
     <h4 id="rights2" style="font-family: 'Lucida Sans'; font-size: 20px;">© 2024 Lucky Pandas | All Rights Reserved</h4>
@@ -40,7 +28,7 @@
   <!-- Mobile Layout -->
   <div class="mobile-layout">
     <div class="game-frame">
-      <canvas id="gameCanvas" width="800" height="400"></canvas>
+      <canvas id="mobileGameCanvas" width="800" height="400"></canvas>
       <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
 
       <!-- Circular Buttons with Font Awesome Arrows -->
@@ -57,7 +45,17 @@
   </div>
 
   <script>
-    var canvas = document.querySelector("canvas");
+
+    // Detect the active Layout//
+    let canvas;
+    if( window.matchMedia("(max-width: 932px)").matches){
+      //Mobile Layout//
+      canvas = document.getElementById("mobileGameCanvas");
+    }
+    else {
+      // Desktop Layout//
+      canvas = document.getElementById("desktopGameCanvas");
+    }    
     var drawingSurface = canvas.getContext("2d");
 
     // Dynamically resize the canvas to match its container
@@ -149,40 +147,28 @@
 
     // Event Listener for Left Button
     document.getElementById('btn-left').addEventListener('touchstart', () => {
-      // e.preventDefault();
-      // e.stopPropagation();
       moveLeft = true;    
     });
 
     document.getElementById('btn-left').addEventListener('touchend', () => {
-      // e.preventDefault();
-      // e.stopPropagation();
       moveLeft = false;    
     });
 
      // Event Listener for Right Button
     document.getElementById('btn-right').addEventListener('touchstart', () => {
-      // e.preventDefault();
-      // e.stopPropagation();
       moveRight = true;     
     });
 
     document.getElementById('btn-right').addEventListener('touchend', () => {
-      // e.preventDefault();
-      // e.stopPropagation();
       moveRight = false;      
     });
 
     // Event Listener for Jump Button
     document.getElementById('btn-jump').addEventListener('touchstart', () => { 
-      // e.preventDefault();
-      // e.stopPropagation();     
       jump = true;      
     });
 
-    document.getElementById('btn-jump').addEventListener('touchend', () => { 
-      // e.preventDefault();
-      // e.stopPropagation();     
+    document.getElementById('btn-jump').addEventListener('touchend', () => {        
       jump = false;      
     }); 
 
