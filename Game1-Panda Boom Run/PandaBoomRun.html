@@ -62,7 +62,25 @@
     if( window.matchMedia("(max-width: 932px)").matches){
       //Mobile Layout//
       canvas = document.getElementById("mobileGameCanvas");
-    }
+
+      // Check if the Screen Orientation API is available
+      if (window.screen.orientation) {
+        // Lock the screen orientation to landscape
+        window.screen.orientation.lock("landscape").catch((err) => {
+          console.warn("Orientation lock failed:", err.message);
+        });
+      } else {
+        // Fallback for older browsers
+        alert("Please rotate your device to landscape for the best experience.");
+      }
+
+      // Optional: Add an event listener to alert the user when orientation changes
+      window.addEventListener("orientationchange", () => {
+        if (window.orientation !== 90 && window.orientation !== -90) {
+          alert("This game works best in landscape mode. Please rotate your device.");
+        }
+      });
+      }
     else {
       // Desktop Layout//
       canvas = document.getElementById("desktopGameCanvas");
@@ -464,27 +482,6 @@
         ground = 270;
       }
     }
-  </script>
-
-  <script>
-    // Check if the Screen Orientation API is available
-    if (window.screen.orientation) {
-      // Lock the screen orientation to landscape
-      window.screen.orientation.lock("landscape").catch((err) => {
-        console.warn("Orientation lock failed:", err.message);
-      });
-    } else {
-      // Fallback for older browsers
-      alert("Please rotate your device to landscape for the best experience.");
-    }
-
-    // Optional: Add an event listener to alert the user when orientation changes
-    window.addEventListener("orientationchange", () => {
-      if (window.orientation !== 90 && window.orientation !== -90) {
-        alert("This game works best in landscape mode. Please rotate your device.");
-      }
-    });
-
   </script>
 </body>
 
