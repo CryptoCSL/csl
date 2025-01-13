@@ -24,14 +24,15 @@ html {
   
   
   
-  .mobile2GameFrame {
+  .mobileGameFrame {
     display: flex;
     position: absolute;
     top: 0;
     left: 0;
     /* aspect-ratio: 2/1; */
     width: 100vw;
-    height: 100vh;
+    padding-top: 50%;
+/*     height: 100vh; */
     background-color: greenyellow;
     border: 10px solid #4CAF50;
     border-radius: 10px;
