@@ -29,10 +29,9 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    /* aspect-ratio: 2/1; */
+    aspect-ratio: 2/1;
     width: 100vw;
-    padding-top: 50%;
-/*     height: 100vh; */
+    height: 100vh;
     background-color: greenyellow;
     border: 10px solid #4CAF50;
     border-radius: 10px;
@@ -50,8 +49,8 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-/*     width: 100%;
-    height: 100%; */
+    width: 100%;
+    height: 100%;
 /*     aspect-ratio: 2 / 1; */
   }
   
