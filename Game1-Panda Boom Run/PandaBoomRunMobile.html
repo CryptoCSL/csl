@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <title>Panda Boom Run</title>
+
+    <!-- Mobile Styles -->
+    <link id="mobile-styles" rel="stylesheet" href="css/mobile-panda-styles.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+    <!-- <h1 id="device-type">Checking device type...</h1> -->
+    <!-- Mobile Layout -->
+    <div class="mobile-layout">
+        <div class="mobileGameFrame">
+            <canvas id="mobileGameCanvas" width="800" height="400"></canvas>
+            <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
+
+            <!-- Circular Buttons with Font Awesome Arrows -->
+            <button id="btn-leftM" class="game-btnM">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="btn-rightM" class="game-btnM">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button id="btn-jumpM" class="game-btnM">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+
+        // Detect the active Layout//
+
+        const userAgent = navigator.userAgent;
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(userAgent)) {
+
+            //Mobile Layout//
+            const mobileScript = document.createElement('script');
+            mobileScript.src = "js/mobile-panda-game.js";
+            document.body.appendChild(mobileScript);
+        }
+        else if (isTouchDevice) {
+            // Desktop with Touch Layout//
+            document.getElementById("device-type").textContent = "You are using a Desktop Device with touch capabilities.";
+        }
+        else {
+            // Desktop Layout//
+            document.getElementById("device-type").textContent = "You are using a Desktop Device.";
+        }
+
+    </script>
+</body>
+
+</html>
