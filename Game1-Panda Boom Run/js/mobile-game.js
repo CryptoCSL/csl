@@ -1,6 +1,6 @@
 let canvas;
 canvas = document.getElementById("mobileGameCanvas");
-var drawingSurface = canvas.getContext("2d");
+
 
 // Check if the Screen Orientation API is available
 if (window.screen.orientation) {
@@ -20,16 +20,16 @@ window.addEventListener("orientationchange", () => {
     }
 });
 
-
+var drawingSurface = canvas.getContext("2d");
 
 // Dynamically resize the canvas to match its container
-// function resizeCanvas() {
-//   canvas.width = canvas.offsetWidth;
-//   canvas.height = canvas.offsetHeight;
-// }
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
 
-// window.addEventListener('resize', resizeCanvas);
-// resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
 
 
 var spriteObject =
