@@ -1,5 +1,9 @@
 let canvas;
 canvas = document.getElementById("mobileGameCanvas");
+if (!canvas) {
+    console.error("Canvas element not found!");
+    return;
+}
 
 // Check if the Screen Orientation API is available
 if (window.screen.orientation) {
