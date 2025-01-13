@@ -1,6 +1,16 @@
 let canvas;
 canvas = document.getElementById("mobileGameCanvas");
+
+if (!canvas) {
+    console.error("Canvas not found!");
+    return;
+}
 var drawingSurface = canvas.getContext("2d");
+
+if (!drawingSurface) {
+    console.error("Failed to get 2d rendering context!");
+    return;
+}
 
 // Check if the Screen Orientation API is available
 if (window.screen.orientation) {
@@ -141,12 +151,12 @@ document.getElementById('btn-jumpM').addEventListener('touchend', () => {
 
 
 
-// document.addEventListener('keydown', function (event) {
-//     if (event.key === 'F5' || (event.metaKey && event.key === 'r')) {
-//         event.preventDefault(); // Prevent default refresh
-//         location.reload(); // Refresh the page
-//     }
-// });
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'F5' || (event.metaKey && event.key === 'r')) {
+        event.preventDefault(); // Prevent default refresh
+        location.reload(); // Refresh the page
+    }
+});
 
 
 update();
