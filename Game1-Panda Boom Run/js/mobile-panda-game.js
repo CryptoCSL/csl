@@ -25,7 +25,7 @@ window.addEventListener("orientationchange", () => {
 
 var drawingSurface = canvas.getContext("2d");
 
-Dynamically resize the canvas to match its container
+// Dynamically resize the canvas to match its container
 function resizeCanvas() {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
