@@ -1,6 +1,6 @@
 let canvas;
 canvas = document.getElementById("mobileGameCanvas");
-
+var drawingSurface = canvas.getContext("2d");
 
 // Check if the Screen Orientation API is available
 if (window.screen.orientation) {
@@ -20,7 +20,7 @@ window.addEventListener("orientationchange", () => {
     }
 });
 
-var drawingSurface = canvas.getContext("2d");
+
 
 // Dynamically resize the canvas to match its container
 function resizeCanvas() {
