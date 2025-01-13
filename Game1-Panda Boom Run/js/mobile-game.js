@@ -162,6 +162,7 @@ document.addEventListener('keydown', function (event) {
 update();
 
 function update(timestamp) {
+    console.log("Game Updating...");
 
 
     requestAnimationFrame(update);
