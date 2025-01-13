@@ -2,8 +2,8 @@
 html {
   margin: 0;
   padding: 0;
-/*   height: 100vh;
-  width: 100vw; */
+  height: 100vh;
+  width: 100vw;
 }
 
 
@@ -11,14 +11,14 @@ html {
 .mobile-layout {
   display: flex;
   position: absolute;
-  left: 20;
-  top: 20;
+  left: 0;
+  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/*   width: 100vw;
+  width: 100vw;
   height: 100vh;
-  aspect-ratio: 2 / 1; */
+  aspect-ratio: 2 / 1;
   background-color: black;
 }
 
@@ -26,11 +26,11 @@ html {
 
 .mobileGameFrame {
   position: absolute;
-  top: 40;
-  left: 40;
-/*   aspect-ratio: 2/1;
+  top: 0;
+  left: 0;
+  aspect-ratio: 2/1;
   width: 100vw;
-  height: 100vh; */
+  height: 100vh;
   background-color: greenyellow;
   border: 10px solid #4CAF50;
   border-radius: 10px;
@@ -47,11 +47,11 @@ html {
   display: flex;
   pointer-events: auto;
   position: absolute;
-  top: 60;
-  left: 60;
-/*   width: 100vw;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  aspect-ratio: 2 / 1; */
+  aspect-ratio: 2 / 1;
 }
 
 
