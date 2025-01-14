@@ -171,6 +171,10 @@ btnRestartM.addEventListener("click", () => {
     shape1.x = 20; // Reset hero position
     shape1.y = ground - shape1.height; // Reset hero to ground
     ground = 320 - 28; // reset ground back to stage's 1
+    ground = 320; // reset ground to stage's 1
+    for ( i = 1; i < 4; i++) {
+        bomb[i].y = ground - 28;
+    }
     face = true;
     updateButtonVisibility(stage); // Update button visibility
     myMusic.play(); // Restart game music
