@@ -166,18 +166,8 @@ document.getElementById('btn-jumpM').addEventListener('touchend', () => {
 
 // Event listener for Restart Button
 btnRestartM.addEventListener("click", () => {
-    // Reset game state and restart
-    stage = 1; // Restart at stage 1
-    shape1.x = 20; // Reset hero position
-    shape1.y = ground - shape1.height; // Reset hero to ground
-    ground = 320 - 28; // reset ground back to stage's 1
-    ground = 320; // reset ground to stage's 1
-    for ( i = 1; i < 4; i++) {
-        bomb[i].y = ground - 28;
-    }
-    face = true;
-    updateButtonVisibility(stage); // Update button visibility
-    myMusic.play(); // Restart game music
+    // Reload the page to restart the game
+    location.reload();
 });
 
 
