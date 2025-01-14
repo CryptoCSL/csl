@@ -9,6 +9,7 @@ html {
 
 .mobile-layout {
   display: flex;
+  posotion: relative;
 /*   position: absolute;
   left: 0;
   top: 0; */
@@ -24,6 +25,7 @@ html {
 
 
 .mobileGameFrame {
+  position: relative;
 /*   position: absolute;
   top: 0;
   left: 0; */
