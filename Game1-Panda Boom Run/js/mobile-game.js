@@ -40,18 +40,34 @@ const btnRestartM = document.getElementById("btn-restartM");
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
-    if (stage === 0 || stage === 5) {
+    if (stage === 0) {
         // Show Restart Button, Hide Navigation Buttons
         btnRestartM.style.display = "block";
         btnLeftM.style.display = "none";
         btnRightM.style.display = "none";
         btnJumpM.style.display = "none";
-    } else if (stage >= 1 && stage <= 4) {
+    } 
+    else if (stage >= 1 && stage <= 4) {
         // Show Navigation Buttons, Hide Restart Button
         btnRestartM.style.display = "none";
         btnLeftM.style.display = "block";
         btnRightM.style.display = "block";
         btnJumpM.style.display = "block";
+    } 
+    else if (stage === 5) {
+        if (shape1.x < 410) {
+            // Show Navigation Buttons, Hide Restart Button
+            btnRestartM.style.display = "none";
+            btnLeftM.style.display = "block";
+            btnRightM.style.display = "block";
+            btnJumpM.style.display = "block";
+        } else if (shape1.x >= 410) {
+            // Show Restart Button, Hide Navigation Buttons
+            btnRestartM.style.display = "block";
+            btnLeftM.style.display = "none";
+            btnRightM.style.display = "none";
+            btnJumpM.style.display = "none";
+        }
     }
 }
 
