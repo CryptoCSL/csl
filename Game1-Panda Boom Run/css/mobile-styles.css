@@ -10,9 +10,9 @@ html {
 .mobile-layout {
   display: flex;
   posotion: relative;
-/*   position: absolute;
+  position: absolute;
   left: 0;
-  top: 0; */
+  top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,9 +26,9 @@ html {
 
 .mobileGameFrame {
   position: relative;
-/*   position: absolute;
+  position: absolute;
   top: 0;
-  left: 0; */
+  left: 0;
   aspect-ratio: 2/1;
   width: 100vw;
   height: 100vh;
@@ -47,9 +47,9 @@ html {
 #mobileGameCanvas {
   display: flex;
   pointer-events: auto;
-/*   position: absolute;
+  position: absolute;
   top: 0;
-  left: 0; */
+  left: 0;
   width: 100vw;
   height: 100vh;
   aspect-ratio: 2 / 1;
