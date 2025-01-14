@@ -23,13 +23,13 @@ window.addEventListener("orientationchange", () => {
 var drawingSurface = canvas.getContext("2d");
 
 // Dynamically resize the canvas to match its container
-function resizeCanvas() {
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
+// function resizeCanvas() {
+//   canvas.width = canvas.offsetWidth;
+//   canvas.height = canvas.offsetHeight;
+// }
 
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
+// window.addEventListener('resize', resizeCanvas);
+// resizeCanvas();
 
 
 // Button Elements
@@ -218,7 +218,7 @@ function update(timestamp) {
 
     requestAnimationFrame(update);
 
-    resizeCanvas();
+    // resizeCanvas();
 
     // Update button visibility
     updateButtonVisibility(stage);
