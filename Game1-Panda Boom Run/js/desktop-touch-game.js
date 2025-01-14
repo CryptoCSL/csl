@@ -205,7 +205,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Event listener for Restart Button
-btnRestartM.addEventListener("click", () => {
+btnRestart.addEventListener("click", () => {
     // Reload the page to restart the game
     location.reload();
 });
