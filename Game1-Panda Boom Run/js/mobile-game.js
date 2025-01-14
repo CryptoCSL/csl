@@ -6,12 +6,11 @@ if (window.screen.orientation && window.screen.orientation.lock) {
     // Lock the screen orientation to landscape
     window.screen.orientation.lock("landscape").catch((err) => {
         console.warn("Orientation lock failed:", err.message);
-        // alert("Please rotate your device to landscape for the best experience.");
+        alert("Please rotate your device to landscape for the best experience.");
     });
 } else {
     // Fallback for older browsers
-    // alert("Please rotate your device to landscape for the best experience.");
-    alert("Hi");
+    alert("Please rotate your device to landscape for the best experience.");
 }
 
 // Optional: Add an event listener to alert the user when orientation changes
