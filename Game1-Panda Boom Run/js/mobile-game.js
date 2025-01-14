@@ -24,14 +24,14 @@ window.addEventListener("orientationchange", () => {
 var drawingSurface = canvas.getContext("2d");
 
 // Dynamically resize the canvas to match its container
-function resizeCanvas() {
-    const devicePixelRatio = window.devicePixelRatio || 1;
-    canvas.width = Math.floor(canvas.offsetWidth * devicePixelRatio);
-    canvas.height = Math.floor(canvas.offsetHeight * devicePixelRatio);
-}
+// function resizeCanvas() {
+//     const devicePixelRatio = window.devicePixelRatio || 1;
+//     canvas.width = Math.floor(canvas.offsetWidth * devicePixelRatio);
+//     canvas.height = Math.floor(canvas.offsetHeight * devicePixelRatio);
+// }
 
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
+// window.addEventListener('resize', resizeCanvas);
+// resizeCanvas();
 
 
 var spriteObject =
