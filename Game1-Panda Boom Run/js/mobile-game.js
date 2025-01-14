@@ -25,8 +25,8 @@ var drawingSurface = canvas.getContext("2d");
 // Dynamically resize the canvas to match its container
 function resizeCanvas() {
     const devicePixelRatio = window.devicePixelRatio || 1;
-    canvas.width = Math.floor(canvas.offsetWidth * devicePixelRatio);
-    canvas.height = Math.floor(canvas.offsetHeight * devicePixelRatio);
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
 }
 
 window.addEventListener('resize', resizeCanvas);
