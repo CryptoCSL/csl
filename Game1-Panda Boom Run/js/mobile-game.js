@@ -140,40 +140,40 @@ document.getElementById('btn-jumpM').addEventListener('touchend', () => {
     jump = false;
 });
 
-//Add keyboard listeners
-window.addEventListener("keydown", function (event) {
-    switch (event.keyCode) {
+// //Add keyboard listeners
+// window.addEventListener("keydown", function (event) {
+//     switch (event.keyCode) {
 
-        case LEFT:
-            moveLeft = true;
-            break;
+//         case LEFT:
+//             moveLeft = true;
+//             break;
 
-        case RIGHT:
-            moveRight = true;
-            break;
+//         case RIGHT:
+//             moveRight = true;
+//             break;
 
-        case SPACE:
-            jump = true;
-            break;
-    }
-}, false);
+//         case SPACE:
+//             jump = true;
+//             break;
+//     }
+// }, false);
 
-window.addEventListener("keyup", function (event) {
-    switch (event.keyCode) {
+// window.addEventListener("keyup", function (event) {
+//     switch (event.keyCode) {
 
-        case LEFT:
-            moveLeft = false;
-            break;
+//         case LEFT:
+//             moveLeft = false;
+//             break;
 
-        case RIGHT:
-            moveRight = false;
-            break;
+//         case RIGHT:
+//             moveRight = false;
+//             break;
 
-        case SPACE:
-            jump = false;
-            break
-    }
-}, false);
+//         case SPACE:
+//             jump = false;
+//             break
+//     }
+// }, false);
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'F5' || (event.metaKey && event.key === 'r')) {
