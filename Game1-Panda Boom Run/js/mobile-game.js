@@ -231,6 +231,7 @@ function update(timestamp) {
     requestAnimationFrame(update);
 
     resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     // Update button visibility
     updateButtonVisibility(stage);
