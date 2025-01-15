@@ -65,9 +65,7 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  padding: 10px 10px;
-  font-size: 2.5em;
-  font-weight: 900;
+  padding: 10px 10px;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +87,8 @@
 /* Button Positions */
 #btn-left {
   position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
   top: 20px;
   left: 20px;
   background-color: #f82613;
@@ -97,6 +97,8 @@
 
 #btn-right {
   position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
   top: 20px;
   left: 80px;
   background-color: #16aa06;
@@ -105,6 +107,8 @@
 
 #btn-jump {
   position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
   top: 20px;
   right: 20px;
   background-color: #d6086c;
@@ -113,6 +117,9 @@
 
 #btn-restart {
   position: absolute;
+  width: 120px;
+  font-size: 1.5em;
+  font-weight: 500;
   bottom: 100px;
   left: 370px;
   background-color: rgb(196, 84, 10);
