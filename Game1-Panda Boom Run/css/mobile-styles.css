@@ -30,8 +30,7 @@ html {
   left: 0;
   aspect-ratio: 2/1;
   width: 100vw;
-  height: auto;
-  max-height: 100vh;
+  height: 100vh;
   background-color: greenyellow;
   border: 10px solid #4CAF50;
   border-radius: 10px;
@@ -45,13 +44,13 @@ html {
 }
 
 #mobileGameCanvas {
-  display: block;
+  display: flex;
   pointer-events: auto;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
   aspect-ratio: 2 / 1;
 }
 
