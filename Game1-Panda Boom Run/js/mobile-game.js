@@ -28,7 +28,6 @@ function resizeCanvas() {
     canvas.height = canvas.offsetHeight;
 }
 
-
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
@@ -205,8 +204,7 @@ function update(timestamp) {
     requestAnimationFrame(update);
 
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
+  
     // Update button visibility
     updateButtonVisibility(stage);
 
