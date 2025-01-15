@@ -99,7 +99,23 @@
         const userAgent = navigator.userAgent;
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(userAgent)) {
+        if (/iPad/i.test(userAgent)) {
+
+             // iPad Layout//
+            document.querySelector('.desktop-layout').style.display = 'none';
+            document.querySelector('.desktop-touch-layout').style.display = 'flex';
+            document.querySelector('.mobile-layout').style.display = 'none';
+
+            document.getElementById('desktop-styles').disabled = true;
+            document.getElementById('mobile-styles').disabled = true;
+            document.getElementById('desktop-touch-styles').disabled = false;
+
+            const desktopTouchScript = document.createElement('script');
+            desktopTouchScript.src = "js/desktop-touch-game.js";
+            document.body.appendChild(desktopTouchScript);
+        }
+
+        else if (/Mobi|Android|iPhone|iPod|BlackBerry|Windows Phone/i.test(userAgent)) {
 
             //Mobile Layout//
             document.querySelector('.desktop-layout').style.display = 'none';
