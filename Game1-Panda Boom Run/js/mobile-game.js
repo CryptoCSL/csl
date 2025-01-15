@@ -31,24 +31,6 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-// Function to request fullscreen
-function enterFullscreen() {
-    const element = document.documentElement; // Target the entire document
-
-    if (element.requestFullscreen) {
-        element.requestFullscreen();
-    } else if (element.webkitRequestFullscreen) { // Safari
-        element.webkitRequestFullscreen();
-    } else if (element.msRequestFullscreen) { // IE/Edge
-        element.msRequestFullscreen();
-    }
-}
-
-// Add an event listener to trigger fullscreen on a touch gesture
-document.addEventListener("touchstart", () => {
-    enterFullscreen();
-}, { once: true }); // Trigger fullscreen only once
-
 
 // Button Elements
 const btnLeftM = document.getElementById("btn-leftM");
