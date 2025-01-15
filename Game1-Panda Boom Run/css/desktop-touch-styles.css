@@ -115,7 +115,19 @@
   z-index: 10;
 }
 
-#btn-restart {
+#btn-restart-lost {
+  position: absolute;
+  width: 120px;
+  font-size: 1.8em;
+  font-weight: bold;
+  background-color: #00BFFF; /* Deep Sky Blue */
+  color: #FFFFFF; /* White text */
+  bottom: 100px;
+  left: 360px;
+  z-index: 10;
+}
+
+#btn-restart-win {
   position: absolute;
   width: 120px;
   font-size: 1.8em;
