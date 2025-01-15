@@ -107,8 +107,8 @@ html {
 
 #btn-restartM {
   position: absolute;
-  bottom: 80px;
-  left: 180px;
+  bottom: 150px;
+  left: 380px;
   background-color: rgb(196, 84, 10);
   z-index: 10;
 }
