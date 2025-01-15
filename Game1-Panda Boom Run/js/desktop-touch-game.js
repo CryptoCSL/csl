@@ -299,7 +299,7 @@ function update(timestamp) {
         drawingSurface.font = "bold 30px Trebuchet MS";
         drawingSurface.fillStyle = "#FFD700";
         drawingSurface.fillText("Game Over!", 340, 160);
-        drawingSurface.fillText("Press F5 to play again.", 240, 200);
+        drawingSurface.fillText("Press button to play again.", 240, 200);
         drawingSurface.shadowColor = "rgba(0, 0, 0, 1)";
         drawingSurface.shadowBlur = 10;
         drawingSurface.shadowOffsetX = 5;
@@ -335,7 +335,7 @@ function update(timestamp) {
             drawingSurface.font = "bold 30px Trebuchet MS";
             drawingSurface.fillStyle = "#FFD700";
             drawingSurface.fillText("You made it !!", 300, 100);
-            drawingSurface.fillText("Press F5 to play again.", 218, 140);
+            drawingSurface.fillText("Press button to play again.", 218, 140);
             drawingSurface.shadowColor = "rgba(0, 0, 0, 1)";
             drawingSurface.shadowBlur = 10;
             drawingSurface.shadowOffsetX = 5;
