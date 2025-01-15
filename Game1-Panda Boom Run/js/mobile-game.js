@@ -36,20 +36,23 @@ resizeCanvas();
 const btnLeftM = document.getElementById("btn-leftM");
 const btnRightM = document.getElementById("btn-rightM");
 const btnJumpM = document.getElementById("btn-jumpM");
-const btnRestartM = document.getElementById("btn-restartM");
+const btnRestartLostM = document.getElementById("btn-restart-lostM");
+const btnRestartWinM = document.getElementById("btn-restart-winM");
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
     if (stage === 0) {
         // Show Restart Button, Hide Navigation Buttons
-        btnRestartM.style.display = "block";
+        btnRestartLostM.style.display = "block";
+        btnRestartWinM.style.display = "none";
         btnLeftM.style.display = "none";
         btnRightM.style.display = "none";
         btnJumpM.style.display = "none";
     } 
     else if (stage >= 1 && stage <= 4) {
         // Show Navigation Buttons, Hide Restart Button
-        btnRestartM.style.display = "none";
+        btnRestartLostM.style.display = "none";
+        btnRestartWinM.style.display = "none";
         btnLeftM.style.display = "block";
         btnRightM.style.display = "block";
         btnJumpM.style.display = "block";
@@ -57,13 +60,15 @@ function updateButtonVisibility(stage) {
     else if (stage === 5) {
         if (shape1.x < 410) {
             // Show Navigation Buttons, Hide Restart Button
-            btnRestartM.style.display = "none";
+            btnRestartLostM.style.display = "none";
+            btnRestartWinM.style.display = "none";
             btnLeftM.style.display = "block";
             btnRightM.style.display = "block";
             btnJumpM.style.display = "block";
         } else if (shape1.x >= 410) {
             // Show Restart Button, Hide Navigation Buttons
-            btnRestartM.style.display = "block";
+            btnRestartLostM.style.display = "none";
+            btnRestartWinM.style.display = "block";
             btnLeftM.style.display = "none";
             btnRightM.style.display = "none";
             btnJumpM.style.display = "none";
@@ -179,8 +184,13 @@ document.getElementById('btn-jumpM').addEventListener('touchend', () => {
     jump = false;
 });
 
-// Event listener for Restart Button
-btnRestartM.addEventListener("click", () => {
+// Event listener for Restart Buttons
+btnRestartLostM.addEventListener("click", () => {
+    // Reload the page to restart the game
+    location.reload();
+});
+
+btnRestartWinM.addEventListener("click", () => {
     // Reload the page to restart the game
     location.reload();
 });
