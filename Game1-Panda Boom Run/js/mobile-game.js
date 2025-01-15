@@ -44,10 +44,11 @@ function enterFullscreen() {
     }
 }
 
-// Add an event listener to trigger fullscreen on a user gesture
-document.addEventListener("click", () => {
+// Add an event listener to trigger fullscreen on a touch gesture
+document.addEventListener("touchstart", () => {
     enterFullscreen();
 }, { once: true }); // Trigger fullscreen only once
+
 
 // Button Elements
 const btnLeftM = document.getElementById("btn-leftM");
