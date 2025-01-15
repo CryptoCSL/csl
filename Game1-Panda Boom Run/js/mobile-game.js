@@ -23,9 +23,36 @@ window.addEventListener("orientationchange", () => {
 var drawingSurface = canvas.getContext("2d");
 
 // Dynamically resize the canvas to match its container
+// function resizeCanvas() {
+//     canvas.width = canvas.offsetWidth;
+//     canvas.height = canvas.offsetHeight;
+// }
+
 function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    const aspectRatio = 2 / 1; // Target aspect ratio (2:1)
+    const maxWidth = window.innerWidth;
+    const maxHeight = window.innerHeight;
+
+    let newWidth = maxWidth;
+    let newHeight = maxWidth / aspectRatio;
+
+    // If height exceeds screen, adjust based on height
+    if (newHeight > maxHeight) {
+        newHeight = maxHeight;
+        newWidth = maxHeight * aspectRatio;
+    }
+
+    // Set canvas dimensions
+    canvas.width = newWidth;
+    canvas.height = newHeight;
+
+    // Update the canvas style (optional, for CSS display)
+    canvas.style.width = `${newWidth}px`;
+    canvas.style.height = `${newHeight}px`;
+
+    // Scale the rendering context
+    const devicePixelRatio = window.devicePixelRatio || 1;
+    drawingSurface.scale(devicePixelRatio, devicePixelRatio);
 }
 
 window.addEventListener('resize', resizeCanvas);
