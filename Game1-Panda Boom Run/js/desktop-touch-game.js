@@ -36,20 +36,23 @@ var drawingSurface = canvas.getContext("2d");
 const btnLeft = document.getElementById("btn-left");
 const btnRight = document.getElementById("btn-right");
 const btnJump = document.getElementById("btn-jump");
-const btnRestart = document.getElementById("btn-restart");
+const btnRestartLost = document.getElementById("btn-restart-lost");
+const btnRestartWin = document.getElementById("btn-restart-win");
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
     if (stage === 0) {
         // Show Restart Button, Hide Navigation Buttons
-        btnRestart.style.display = "block";
+        btnRestartLost.style.display = "block";
+        btnRestartWin.style.display = "none";
         btnLeft.style.display = "none";
         btnRight.style.display = "none";
         btnJump.style.display = "none";
     } 
     else if (stage >= 1 && stage <= 4) {
         // Show Navigation Buttons, Hide Restart Button
-        btnRestart.style.display = "none";
+        btnRestartLost.style.display = "none";
+        btnRestartWin.style.display = "none";
         btnLeft.style.display = "block";
         btnRight.style.display = "block";
         btnJump.style.display = "block";
@@ -57,13 +60,15 @@ function updateButtonVisibility(stage) {
     else if (stage === 5) {
         if (shape1.x < 410) {
             // Show Navigation Buttons, Hide Restart Button
-            btnRestart.style.display = "none";
+            btnRestartLost.style.display = "none";
+            btnRestartWin.style.display = "none";
             btnLeft.style.display = "block";
             btnRight.style.display = "block";
             btnJump.style.display = "block";
         } else if (shape1.x >= 410) {
             // Show Restart Button, Hide Navigation Buttons
-            btnRestart.style.display = "block";
+            btnRestartLost.style.display = "none";
+            btnRestartWin.style.display = "block";
             btnLeft.style.display = "none";
             btnRight.style.display = "none";
             btnJump.style.display = "none";
@@ -221,7 +226,12 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Event listener for Restart Button
-btnRestart.addEventListener("click", () => {
+btnRestartLost.addEventListener("click", () => {
+    // Reload the page to restart the game
+    location.reload();
+});
+
+btnRestartWin.addEventListener("click", () => {
     // Reload the page to restart the game
     location.reload();
 });
