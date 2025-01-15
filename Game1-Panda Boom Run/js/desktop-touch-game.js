@@ -42,31 +42,31 @@ const btnRestart = document.getElementById("btn-restart");
 function updateButtonVisibility(stage) {
     if (stage === 0) {
         // Show Restart Button, Hide Navigation Buttons
-        btnRestartM.style.display = "block";
-        btnLeftM.style.display = "none";
-        btnRightM.style.display = "none";
-        btnJumpM.style.display = "none";
+        btnRestart.style.display = "block";
+        btnLeft.style.display = "none";
+        btnRight.style.display = "none";
+        btnJump.style.display = "none";
     } 
     else if (stage >= 1 && stage <= 4) {
         // Show Navigation Buttons, Hide Restart Button
-        btnRestartM.style.display = "none";
-        btnLeftM.style.display = "block";
-        btnRightM.style.display = "block";
-        btnJumpM.style.display = "block";
+        btnRestart.style.display = "none";
+        btnLeft.style.display = "block";
+        btnRight.style.display = "block";
+        btnJump.style.display = "block";
     } 
     else if (stage === 5) {
         if (shape1.x < 410) {
             // Show Navigation Buttons, Hide Restart Button
-            btnRestartM.style.display = "none";
-            btnLeftM.style.display = "block";
-            btnRightM.style.display = "block";
-            btnJumpM.style.display = "block";
+            btnRestart.style.display = "none";
+            btnLeft.style.display = "block";
+            btnRight.style.display = "block";
+            btnJump.style.display = "block";
         } else if (shape1.x >= 410) {
             // Show Restart Button, Hide Navigation Buttons
-            btnRestartM.style.display = "block";
-            btnLeftM.style.display = "none";
-            btnRightM.style.display = "none";
-            btnJumpM.style.display = "none";
+            btnRestart.style.display = "block";
+            btnLeft.style.display = "none";
+            btnRight.style.display = "none";
+            btnJump.style.display = "none";
         }
     }
 }
