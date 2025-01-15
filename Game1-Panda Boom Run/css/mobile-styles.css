@@ -109,7 +109,19 @@ html {
   z-index: 10;
 }
 
-#btn-restartM {
+#btn-restart-lostM {
+  position: absolute;
+  width: 120;
+  font-size: 1.8em;
+  font-weight: bold;
+  background-color: #00BFFF; /* Deep Sky Blue */
+  color: #FFFFFF; /* White text */
+  bottom: 70px;
+  left: 360px;
+  z-index: 10;
+}
+
+#btn-restart-winM {
   position: absolute;
   width: 120;
   font-size: 1.8em;
