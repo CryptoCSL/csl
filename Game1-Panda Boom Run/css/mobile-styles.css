@@ -111,7 +111,7 @@ html {
 
 #btn-restart-lostM {
   position: absolute;
-  width: 120;
+  width: 120px;
   font-size: 1.8em;
   font-weight: bold;
   background-color: #00BFFF; /* Deep Sky Blue */
@@ -123,7 +123,7 @@ html {
 
 #btn-restart-winM {
   position: absolute;
-  width: 120;
+  width: 120px;
   font-size: 1.8em;
   font-weight: bold;
   background-color: #00BFFF; /* Deep Sky Blue */
