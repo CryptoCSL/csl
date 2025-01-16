@@ -31,19 +31,19 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-function hideTopBar() {
-    window.scrollTo(0, 1); // Scroll 1px down to hide the top bar
-}
+// function hideTopBar() {
+//     window.scrollTo(0, 1); // Scroll 1px down to hide the top bar
+// }
 
-// Call it on page load
-window.addEventListener("load", () => {
-    hideTopBar();
-});
+// // Call it on page load
+// window.addEventListener("load", () => {
+//     hideTopBar();
+// });
 
-// Call it again on resize
-window.addEventListener("resize", () => {
-    hideTopBar();
-});
+// // Call it again on resize
+// window.addEventListener("resize", () => {
+//     hideTopBar();
+// });
 
 
 // Button Elements
