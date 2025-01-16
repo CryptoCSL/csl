@@ -53,9 +53,9 @@ const btnJumpM = document.getElementById("btn-jumpM");
 const btnRestartLostM = document.getElementById("btn-restart-lostM");
 const btnRestartWinM = document.getElementById("btn-restart-winM");
 const btnFullscreenM = document.getElementById("btn-fullscreenM");
-document.addEventListener("touchstart",() =>{ 
-    enterFullscreen();
-}, { once: true }); // Trigger fullscreen only once
+// document.addEventListener("touchstart",() =>{ 
+//     enterFullscreen();
+// }, { once: true }); // Trigger fullscreen only once
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
