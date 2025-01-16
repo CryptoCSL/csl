@@ -41,11 +41,10 @@ html {
   justify-content: center;
   align-items: center;
   overflow: visible;
-  border: none;
 }
 
 #mobileGameCanvas {
-  display: flex;
+  display: block;
   pointer-events: auto;
   position: absolute;
   top: 0;
@@ -105,7 +104,7 @@ html {
   font-size: 2.5em;
   font-weight: 900;
   top: 20px;
-  right: 20px;
+  left: 320px;
   background-color: #d6086c;
   z-index: 10;
 }
@@ -118,7 +117,7 @@ html {
   background-color: #00BFFF; /* Deep Sky Blue */
   color: #FFFFFF; /* White text */
   bottom: 100px;
-  left: 370px;
+  left: 360px;
   z-index: 10;
 }
 
@@ -136,7 +135,7 @@ html {
 
 #btn-fullscreenM {
   position: absolute;
-  width: 120;
+  width: 120px;
   font-size: 1em;
   font-weight:normal;
   background-color: #00BFFF; /* Deep Sky Blue */
