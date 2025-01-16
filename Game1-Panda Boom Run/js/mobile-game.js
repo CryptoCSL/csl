@@ -31,20 +31,6 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-// function hideTopBar() {
-//     window.scrollTo(0, 1); // Scroll 1px down to hide the top bar
-// }
-
-// // Call it on page load
-// window.addEventListener("load", () => {
-//     hideTopBar();
-// });
-
-// // Call it again on resize
-// window.addEventListener("resize", () => {
-//     hideTopBar();
-// });
-
 
 // Button Elements
 const btnLeftM = document.getElementById("btn-leftM");
@@ -52,10 +38,6 @@ const btnRightM = document.getElementById("btn-rightM");
 const btnJumpM = document.getElementById("btn-jumpM");
 const btnRestartLostM = document.getElementById("btn-restart-lostM");
 const btnRestartWinM = document.getElementById("btn-restart-winM");
-const btnFullscreenM = document.getElementById("btn-fullscreenM").addEventListener("touchstart", enterFullscreen);
-// document.addEventListener("touchstart",() =>{ 
-//     enterFullscreen();
-// }, { once: true }); // Trigger fullscreen only once
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
@@ -63,7 +45,6 @@ function updateButtonVisibility(stage) {
         // Show Restart Button, Hide Navigation Buttons
         btnRestartLostM.style.display = "block";
         btnRestartWinM.style.display = "none";
-        btnFullscreenM.style.display = "none";
         btnLeftM.style.display = "none";
         btnRightM.style.display = "none";
         btnJumpM.style.display = "none";
@@ -72,7 +53,6 @@ function updateButtonVisibility(stage) {
         // Show Navigation Buttons, Hide Restart Button
         btnRestartLostM.style.display = "none";
         btnRestartWinM.style.display = "none";
-        btnFullscreenM.style.display = "block";
         btnLeftM.style.display = "block";
         btnRightM.style.display = "block";
         btnJumpM.style.display = "block";
@@ -82,7 +62,6 @@ function updateButtonVisibility(stage) {
             // Show Navigation Buttons, Hide Restart Button
             btnRestartLostM.style.display = "none";
             btnRestartWinM.style.display = "none";
-            btnFullscreenM.style.display = "block";
             btnLeftM.style.display = "block";
             btnRightM.style.display = "block";
             btnJumpM.style.display = "block";
@@ -90,7 +69,6 @@ function updateButtonVisibility(stage) {
             // Show Restart Button, Hide Navigation Buttons
             btnRestartLostM.style.display = "none";
             btnRestartWinM.style.display = "block";
-            btnFullscreenM.style.display = "none";
             btnLeftM.style.display = "none";
             btnRightM.style.display = "none";
             btnJumpM.style.display = "none";
