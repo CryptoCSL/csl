@@ -131,15 +131,3 @@ html {
   left: 340px;
   z-index: 10;
 }
-
-#btn-fullscreenM {
-  position: absolute;
-  width: 100px;
-  font-size: 1.1em;
-  font-weight:normal;
-  background-color: #00BFFF; /* Deep Sky Blue */
-  color: #FFFFFF; /* White text */
-  top: 20px;
-  left: 600px;
-  z-index: 10;
-}
