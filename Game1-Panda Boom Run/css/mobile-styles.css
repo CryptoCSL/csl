@@ -6,8 +6,6 @@ html {
   width: 100vw;
 }
 
-
-
 .mobile-layout {
   display: flex;
   position: absolute;
@@ -21,8 +19,6 @@ html {
   aspect-ratio: 2 / 1;
   background-color: black;
 }
-
-
 
 .mobileGameFrame {
   position: absolute;
@@ -52,7 +48,6 @@ html {
   height: auto;
   aspect-ratio: 2 / 1;
 }
-
 
 .game-btnM {
   position: absolute;
