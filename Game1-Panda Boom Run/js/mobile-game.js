@@ -52,6 +52,9 @@ const btnRightM = document.getElementById("btn-rightM");
 const btnJumpM = document.getElementById("btn-jumpM");
 const btnRestartLostM = document.getElementById("btn-restart-lostM");
 const btnRestartWinM = document.getElementById("btn-restart-winM");
+const btnFullscreenM = document.getElementById("btn-fullscreenM").addEventListener("touchstart",() =>{ 
+    enterFullscreen();
+}, { once: true }); // Trigger fullscreen only once
 
 // Function to toggle button visibility based on the current stage
 function updateButtonVisibility(stage) {
@@ -59,6 +62,7 @@ function updateButtonVisibility(stage) {
         // Show Restart Button, Hide Navigation Buttons
         btnRestartLostM.style.display = "block";
         btnRestartWinM.style.display = "none";
+        btnFullscreenM.style.display = "none";
         btnLeftM.style.display = "none";
         btnRightM.style.display = "none";
         btnJumpM.style.display = "none";
@@ -67,6 +71,7 @@ function updateButtonVisibility(stage) {
         // Show Navigation Buttons, Hide Restart Button
         btnRestartLostM.style.display = "none";
         btnRestartWinM.style.display = "none";
+        btnFullscreenM.style.display = "block";
         btnLeftM.style.display = "block";
         btnRightM.style.display = "block";
         btnJumpM.style.display = "block";
@@ -76,6 +81,7 @@ function updateButtonVisibility(stage) {
             // Show Navigation Buttons, Hide Restart Button
             btnRestartLostM.style.display = "none";
             btnRestartWinM.style.display = "none";
+            btnFullscreenM.style.display = "block";
             btnLeftM.style.display = "block";
             btnRightM.style.display = "block";
             btnJumpM.style.display = "block";
@@ -83,6 +89,7 @@ function updateButtonVisibility(stage) {
             // Show Restart Button, Hide Navigation Buttons
             btnRestartLostM.style.display = "none";
             btnRestartWinM.style.display = "block";
+            btnFullscreenM.style.display = "none";
             btnLeftM.style.display = "none";
             btnRightM.style.display = "none";
             btnJumpM.style.display = "none";
