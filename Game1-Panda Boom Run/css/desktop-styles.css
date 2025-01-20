@@ -44,7 +44,10 @@
 }
 
 .footer-layout {
-background-color: #2e513b;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #2e513b;
 }
 
 #rights1    {
@@ -52,7 +55,7 @@ background-color: #2e513b;
   bottom: 0;
   font-family: 'Lucida Sans'; 
   font-size: 20px;
-  color:rgb(5, 47, 5);
+  color: #FFD700;
 }
 
 .desktopGameFrame {
