@@ -47,10 +47,7 @@ html {
   width: auto;
   height: 100Vh;
   transform-origin: top left;
-  /* max-height: 100vh; */
-  /* background-color: greenyellow; */
   border: none;
-  /* border-radius: 10px; */
   padding: 0;
   display: flex;
   text-align: center;
