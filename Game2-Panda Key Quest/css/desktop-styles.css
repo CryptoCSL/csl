@@ -1,0 +1,93 @@
+.desktop-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main-desktop-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100%;
+    background-image: url(../img/bambooForest2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(228, 236, 9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Adds a soft black shadow */
+}
+
+.desktopGameFrame {
+    position: relative;
+    background-color: greenyellow;
+    border: 10px solid #4CAF50;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    margin-top: 0;
+    text-align: center;
+}
+
+#desktopGameCanvas {
+    pointer-events: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#CTA1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: rgb(228, 236, 9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Adds a soft black shadow */
+}
+
+.footer-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 20px;
+    background-color: #2e513b;
+}
+
+#rights1 {
+    position: relative;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    margin-top: 20px;
+    font-size: 1em;
+    color: rgb(228, 236, 9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Adds a soft black shadow */
+}
