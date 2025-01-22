@@ -49,6 +49,7 @@
   justify-content: center;
   width: 100vw;
   height: 40px;
+  line-height: 40px;
   background-color: #2e513b;
 }
 
@@ -56,6 +57,7 @@
   position: relative;
   bottom: 0;
   height: 40px;
+  line-height: 40px;
   font-family: 'Lucida Sans';
   font-size: 20px;
   font-weight: bold;
