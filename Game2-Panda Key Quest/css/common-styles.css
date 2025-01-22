@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     text-align: center;
   }
