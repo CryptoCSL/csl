@@ -1,8 +1,6 @@
 var canvas = document.getElementById("desktopTouchGameCanvas");
 var drawingSurface = canvas.getContext("2d");
 
-
-
 // Button Elements
 const btnLeft = document.getElementById("btn-left");
 const btnRight = document.getElementById("btn-right");
@@ -147,8 +145,15 @@ bambooTile1V.src = "img/BambooTile1H.png";
 const greenTile1 = new Image();
 greenTile1.src = "img/GreenTile1.png";
 
+let hasPlayed = false;
 var myAudio = new Audio();
 myAudio.src = "sounds/expl.mp3";
+var myGameMusic = new Audio();
+myGameMusic.src = "sounds/PandaKeyQuestMusic.mp3";
+var myWinAudio = new Audio();
+myWinAudio.src = "sounds/myWinAudio.mp3";
+var myLoseAudio = new Audio();
+myLoseAudio.src = "sounds/myLoseAudio.mp3";
 
 var k;
 var flaglife = true;
@@ -515,14 +520,26 @@ function update() {
             stage = 2;
         }
 
+        myGameMusic.play();
+
     }
 
     if (stage == 2) {  // 'YOU WIN!' screen
         drawingSurface.drawImage(image4, 0, 0, canvas.width, canvas.height);
+        myGameMusic.pause();
+            if (!hasPlayed) {
+                myWinAudio.play();
+                hasPlayed = true;
+            }
     }
 
     if (stage == 3) {   // 'YOU LOST!'  screen
         drawingSurface.drawImage(image1, 0, 0, canvas.width, canvas.height);
+        myGameMusic.pause();
+            if (!hasPlayed) {
+                myLoseAudio.play();
+                hasPlayed = true;
+            }
     }
 
 }
