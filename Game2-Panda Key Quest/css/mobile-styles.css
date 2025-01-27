@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: auto;
+  width: 100vw;
   background-image: url(../img/bambooForest2.jpeg);
   background-size: cover;
   background-position: center;
@@ -20,7 +20,7 @@ html {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   transform-origin: center center;
   margin: 0 0;
   padding: 0;
