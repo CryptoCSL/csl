@@ -20,7 +20,7 @@ html {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   transform-origin: center center;
   margin: 0 0;
   padding: 0;
