@@ -1,11 +1,11 @@
 /* Mobile Layout */
-/* html {
+html {
   display: grid;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: auto;
-} */
+}
 
 .mobile-layout {
   display: flex;
