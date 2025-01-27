@@ -19,7 +19,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform-origin: center top;
+/*   transform-origin: center top; */
   background-image: url(../img/bambooForest2.jpeg);
   background-size: cover;
   background-position: center;
@@ -41,7 +41,7 @@ html {
   /* Maintain aspect ratio */
   height: 600px;
   /* Fit full height of the viewport in landscape mode*/
-  margin: 0;
+  margin: 0 0;
   padding: 0;
 }
 
