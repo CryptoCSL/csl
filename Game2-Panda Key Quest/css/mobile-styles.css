@@ -5,7 +5,10 @@ html {
   padding: 0;
   height: 100vh;
   width: auto;
-  background-color: green;
+  background-image: url(../img/bambooForest2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .mobile-layout {
@@ -19,10 +22,6 @@ html {
   justify-content: center;
   align-items: center;
   transform-origin: center center;
-  background-image: url(../img/bambooForest2.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   margin: 0 0;
   padding: 0;
 }
