@@ -5,13 +5,14 @@ html {
   padding: 0;
   height: 100vh;
   width: auto;
+  background-color: green;
 }
 
 .mobile-layout {
   display: flex;
-  /* position: absolute;
+  position: absolute;
   left: 0;
-  top: 0; */
+  top: 0;
   width: 100vw;
   height: 100vh;
   flex-direction: column;
