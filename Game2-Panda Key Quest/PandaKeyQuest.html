@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <title>Panda Key Quest</title>
+
+  <!-- Common Styles -->
+  <link rel="stylesheet" href="css/common-styles.css">
+
+  <!-- Desktop Styles -->
+  <link id="desktop-styles" rel="stylesheet" href="css/desktop-styles.css" disabled>
+
+  <!-- Desktop with Touch Styles -->
+  <link id="desktop-touch-styles" rel="stylesheet" href="css/desktop-touch-styles.css" disabled>
+
+  <!-- Mobile Styles -->
+  <link id="mobile-styles" rel="stylesheet" href="css/mobile-styles.css" disabled>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Desktop layout -->
+  <div class="desktop-layout">
+    <div class="main-desktop-layout">
+      <h1 id="title">Panda Key Quest</h1>
+      <div class="desktopGameFrame">
+        <canvas id="desktopGameCanvas" width="800" height="600"></canvas>
+        <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
+        <h4 id="CTA1">Press arrow keys to play!</h4>
+      </div>
+
+    </div>
+    <!-- Desktop footer  -->
+    <footer class="footer-layout">
+      <h4 id="rights1">© 2024 Lucky Pandas | All Rights Reserved</h4>
+    </footer>
+  </div>
+
+
+
+  <!-- Desktop with Touch Layout -->
+  <div class="desktop-touch-layout">
+    <div class="main-desktop-touch-layout">
+      <h1 id="titleTouch">Panda Key Quest</h1>
+      <div class="desktopTouchGameFrame">
+        <canvas id="desktopTouchGameCanvas" width="800" height="600"></canvas>
+        <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
+        <h4 id="CTA2">Press arrow keys to play!</h4>
+      </div>
+
+      <!-- Circular Buttons with Font Awesome Arrows -->
+      <button id="btn-left" class="game-btn" style="display: none;">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button id="btn-right" class="game-btn" style="display: none;">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button id="btn-up" class="game-btn" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <button id="btn-down" class="game-btn" style="display: none;">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button id="btn-restart-lost" class="game-btn" style="display: none;">
+        Restart
+      </button>
+      <button id="btn-restart-win" class="game-btn" style="display: none;">
+        Restart
+      </button>
+    </div>
+    <!-- Desktop Touch footer  -->
+    <footer class="footer-touch-layout">
+      <h4 id="rights2">© 2024 Lucky Pandas | All Rights Reserved</h4>
+    </footer>
+  </div>
+
+  <!-- Mobile layout -->
+  <div class="mobile-layout">
+    <div class="main-mobile-layout">
+      <div class="mobileGameFrame">
+        <canvas id="mobileGameCanvas" width="800" height="600"></canvas>
+        <!-- <script src="requestAnimationFramePolyfill.js"></script> -->
+      </div>
+
+      <!-- Circular Buttons with Font Awesome Arrows -->
+      <button id="btn-leftM" class="game-btnM" style="display: none;">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button id="btn-rightM" class="game-btnM" style="display: none;">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <button id="btn-upM" class="game-btnM" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <button id="btn-downM" class="game-btnM" style="display: none;">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button id="btn-restart-lostM" class="game-btnM" style="display: none;">
+        Restart
+      </button>
+      <button id="btn-restart-winM" class="game-btnM" style="display: none;">
+        Restart
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+
+    // Detect the active Layout//
+
+    const userAgent = navigator.userAgent;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (/iPad/i.test(userAgent)) {
+
+      // iPad Layout//
+      document.querySelector('.desktop-layout').style.display = 'none';
+      document.querySelector('.desktop-touch-layout').style.display = 'flex';
+      document.querySelector('.mobile-layout').style.display = 'none';
+
+      document.getElementById('desktop-styles').disabled = true;
+      document.getElementById('mobile-styles').disabled = true;
+      document.getElementById('desktop-touch-styles').disabled = false;
+
+      const desktopTouchScript = document.createElement('script');
+      desktopTouchScript.src = "js/desktop-touch-game.js";
+      document.body.appendChild(desktopTouchScript);
+    }
+
+    else if (/Mobi|Android|iPhone|iPod|BlackBerry|Windows Phone/i.test(userAgent)) {
+
+      //Mobile Layout//
+      document.querySelector('.desktop-layout').style.display = 'none';
+      document.querySelector('.desktop-touch-layout').style.display = 'none';
+      document.querySelector('.mobile-layout').style.display = 'flex';
+
+      document.getElementById('desktop-styles').disabled = true;
+      document.getElementById('desktop-touch-styles').disabled = true;
+      document.getElementById('mobile-styles').disabled = false;
+
+      const mobileScript = document.createElement('script');
+      mobileScript.src = "js/mobile-game.js";
+      document.body.appendChild(mobileScript);
+    }
+    else if (isTouchDevice) {
+      // Desktop with Touch Layout//
+      document.querySelector('.desktop-layout').style.display = 'none';
+      document.querySelector('.desktop-touch-layout').style.display = 'flex';
+      document.querySelector('.mobile-layout').style.display = 'none';
+
+      document.getElementById('desktop-styles').disabled = true;
+      document.getElementById('mobile-styles').disabled = true;
+      document.getElementById('desktop-touch-styles').disabled = false;
+
+      const desktopTouchScript = document.createElement('script');
+      desktopTouchScript.src = "js/desktop-touch-game.js";
+      document.body.appendChild(desktopTouchScript);
+    }
+    else {
+      // Desktop Layout//
+      document.querySelector('.desktop-layout').style.display = 'flex';
+      document.querySelector('.desktop-touch-layout').style.display = 'none';
+      document.querySelector('.mobile-layout').style.display = 'none';
+
+      document.getElementById('desktop-touch-styles').disabled = true;
+      document.getElementById('mobile-styles').disabled = true;
+      document.getElementById('desktop-styles').disabled = false;
+
+      const desktopScript = document.createElement('script');
+      desktopScript.src = "js/desktop-game.js";
+      document.body.appendChild(desktopScript);
+    }
+
+  </script>
+
+</body>
+
+</html>
