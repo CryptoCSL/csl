@@ -49,11 +49,11 @@ html {
   position: relative;
   width: 800px;
   height: 600px;
-  transform-origin: top center;
-  background-color: greenyellow;
+  transform-origin: center center;
+/*   background-color: greenyellow;
   border: 5px solid #4CAF50;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px; */
   display: flex;
   text-align: center;
   justify-content: center;
