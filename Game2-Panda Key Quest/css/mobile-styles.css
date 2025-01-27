@@ -43,28 +43,21 @@ html {
   /* Fit full height of the viewport in landscape mode*/
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
-  /* Prevent overflow */
-  background-color: black;
-  /* Optional background */
 }
 
 .mobileGameFrame {
   position: relative;
   width: 800px;
   height: 600px;
-  /* transform-origin: top left; */
+  transform-origin: top center;
   background-color: greenyellow;
   border: 5px solid #4CAF50;
   border-radius: 5px;
   padding: 5px;
-  /* border: none;
-  padding: 0; */
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  /* overflow: visible; */
 }
 
 #mobileGameCanvas {
