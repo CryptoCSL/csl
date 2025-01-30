@@ -1,0 +1,153 @@
+/* Mobile Layout */
+/* html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #16aa06;
+} */
+
+.mobile-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center;
+  background-image: url(../img/BambooForest.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0;
+  padding: 0;
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  
+  /* aspect-ratio: 2 / 1;
+  background-color: rgb(205, 11, 11); */
+}
+
+.main-mobile-layout {
+  flex: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  width: 900px;
+  /* Maintain aspect ratio */
+  height: 400px;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.mobileGameFrame {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  /* max-height: 100vh; */
+  background-color: greenyellow;
+  border: 5px solid #4CAF50;
+  border-radius: 5px;
+  padding: 5px;
+  /* margin: 0; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* overflow: visible; */
+}
+
+#mobileGameCanvas {
+  display: flex;
+  pointer-events: auto;
+  width: 800px;
+  height: 400px;
+  /* margin-top: 0;
+  margin-bottom: 0; */
+  /* aspect-ratio: 2 / 1; */
+}
+
+.game-btnM {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  padding: 0 1px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(246, 249, 246);
+  border: none;
+  border-radius: 30%;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  touch-action: none;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.game-btnM:active {
+  background-color: #0097a7;
+}
+
+/* Button Positions */
+#btn-leftM {
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
+  top: 20px;
+  left: 20px;
+  background-color: #f82613;
+  z-index: 10;
+}
+
+#btn-rightM {
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
+  top: 20px;
+  left: 80px;
+  background-color: #16aa06;
+  z-index: 10;
+}
+
+#btn-jumpM {
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: 900;
+  top: 20px;
+  left: 720px;
+  background-color: #d6086c;
+  z-index: 10;
+}
+
+#btn-restart-lostM {
+  position: absolute;
+  width: 120px;
+  font-size: 1.8em;
+  font-weight: bold;
+  background-color: #00BFFF; /* Deep Sky Blue */
+  color: #FFFFFF; /* White text */
+  bottom: 100px;
+  left: 360px;
+  z-index: 10;
+}
+
+#btn-restart-winM {
+  position: absolute;
+  width: 120px;
+  font-size: 1.8em;
+  font-weight: bold;
+  background-color: #00BFFF; /* Deep Sky Blue */
+  color: #FFFFFF; /* White text */
+  bottom: 70px;
+  left: 340px;
+  z-index: 10;
+}
