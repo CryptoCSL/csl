@@ -1,15 +1,11 @@
 /* Mobile Layout */
-html {
+/* html {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/BambooForest.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-/*   background-color: #16aa06; */
-}
+  background-color: #16aa06;
+} */
 
 
 .mobile-layout {
@@ -20,7 +16,10 @@ html {
   justify-content: center;
   align-items: center;
   transform-origin: center center;
- 
+  background-image: url(../img/BambooForest.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0 0;
   padding: 0;
   /* position: absolute;
