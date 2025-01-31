@@ -4,24 +4,9 @@ html {
   padding: 0;
   height: 100vh;
   width: 100vw;
-/*   background-color: #16aa06; */
   background-color: rgb(1, 77, 21);
   overflow: hidden;
 }
-
-
-/* body {
-  background-image: url(../img/BambooForest.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-} */
 
 .mobile-layout {
   display: flex;
@@ -38,12 +23,6 @@ html {
   background-repeat: no-repeat; */
   margin: 0 0;
   padding: 0;
-  /* position: absolute;
-  left: 0;
-  top: 0; */
-  
-  /* aspect-ratio: 2 / 1;
-  background-color: rgb(205, 11, 11); */
 }
 
 .main-mobile-layout {
@@ -60,25 +39,20 @@ html {
   height: 400px;
   margin: 0;
   padding: 0;
-
 }
-
 
 .mobileGameFrame {
   position: relative;
   width: 800px;
   height: 400px;
-  /* max-height: 100vh; */
   background-color: greenyellow;
   border: 5px solid #4CAF50;
   border-radius: 5px;
   padding: 5px;
-  /* margin: 0; */
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  /* overflow: visible; */
 }
 
 #mobileGameCanvas {
@@ -86,9 +60,6 @@ html {
   pointer-events: auto;
   width: 800px;
   height: 400px;
-  /* margin-top: 0;
-  margin-bottom: 0; */
-  /* aspect-ratio: 2 / 1; */
 }
 
 .game-btnM {
