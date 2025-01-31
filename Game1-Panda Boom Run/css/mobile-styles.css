@@ -6,6 +6,7 @@ html {
   width: 100vw;
 /*   background-color: #16aa06; */
   background-color: rgb(1, 77, 21);
+  overflow: hidden;
 }
 
 
