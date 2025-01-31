@@ -42,8 +42,6 @@
   /* Adds a soft black shadow */
 }
 
-
-
 .desktopGameFrame {
   position: relative;
   width: 800px;
@@ -57,7 +55,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 #desktopGameCanvas {
   pointer-events: auto;
@@ -105,9 +102,4 @@
   color: #FFD700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     /* Adds a soft black shadow */
-    
-  /* height: auto;
-  line-height: auto; */
-  
-  
 }
