@@ -8,6 +8,13 @@
 } */
 
 
+body {
+  background-image: url(../img/BambooForest.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .mobile-layout {
   display: flex;
   width: 100vw;
